@@ -1,0 +1,38 @@
+/* cores*/
+:root {
+    --laranja: #f0bd70;
+    --branco: #FFFFFF;
+    --cinza: #eeeeee;
+
+}
+
+/*corpo da pagina */
+body {
+    background-color: var(--cinza);
+    font-size: 20px;
+}
+
+/* container */
+.container-fluid {
+    padding-left: 45px;
+}
+
+.navigation-bar {
+  background-color: var(--laranja)
+}
+
+/* links dentro da nb */
+.navigation-bar .nav-link {
+  color: var(--branco);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+/* remove bolinhas da lista */
+.navigation-bar .navbar-nav {
+  list-style: none; 
+  padding-left: 0;
+  margin: 0;
+  display: flex; 
+  gap: 1rem;
+}
