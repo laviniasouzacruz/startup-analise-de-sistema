@@ -1,20 +1,24 @@
 /* cores*/
 :root {
-    --laranja: #f0bd70;
-    --branco: #FFFFFF;
-    --cinza: #eeeeee;
+  --laranja: #f0bd70;
+  --branco: #FFFFFF;
+  --cinza: #eeeeee;
 
 }
 
 /*corpo da pagina */
 body {
-    background-color: var(--cinza);
-    font-size: 20px;
+  background-color: var(--cinza);
+  /*Importação de fonte*/
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
 }
 
 /* container */
 .container-fluid {
-    padding-left: 45px;
+  padding-left: 45px;
 }
 
 .navigation-bar {
