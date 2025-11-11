@@ -1,14 +1,14 @@
 /* cores*/
 :root {
-  --laranja: #f0bd70;
+  --preto: #4b4b4b;
   --branco: #FFFFFF;
-  --cinza: #eeeeee;
+  --cinza01: #ffffff;
 
 }
 
 /*corpo da pagina */
 body {
-  background-color: var(--cinza);
+  background-color: var(--cinza01);
   /*Importação de fonte*/
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
@@ -22,7 +22,7 @@ body {
 }
 
 .navigation-bar {
-  background-color: var(--laranja)
+  background-color: var(--preto);
 }
 
 /* links dentro da nb */
@@ -38,5 +38,4 @@ body {
   padding-left: 0;
   margin: 0;
   display: flex; 
-  gap: 1rem;
 }
