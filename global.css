@@ -1,15 +1,15 @@
 /* cores*/
 :root {
-  --preto: #4b4b4b;
+  --preto: #747272;
   --branco: #FFFFFF;
   --cinza01: #ffffff;
+  --vermelho01: #d67b7b;
 
 }
 
 /*corpo da pagina */
 body {
   background-color: var(--cinza01);
-  /*Importação de fonte*/
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400px;
@@ -38,4 +38,26 @@ body {
   padding-left: 0;
   margin: 0;
   display: flex; 
+}
+
+/* mouse passa por cima do item */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* personalização da cor de hover */
+.nav-link:hover, 
+.dropdown-item:hover {
+  color: var(--vermelho01);
+}
+
+/* força o menu a abrir quando o mouse passa */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block !important;
 }
