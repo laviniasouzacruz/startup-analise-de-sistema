@@ -360,13 +360,13 @@ text-align: justify;
     border-radius: 14px;
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
     text-align: center;
-    position: relative;    /* garante posicionamento próprio */
-    z-index: 300;          /* evita ser coberto por outros elementos */
+    position: relative;
+    z-index: 300;
 }
 
 .login-box i {
     font-size: 55px;
-    color: var(--primary); /* antes: var(--primary-color) -> use var(--primary) */
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
@@ -379,9 +379,8 @@ text-align: justify;
     font-size: 15.5px;
 }
 
-/* botão corrigido: garante background visível por padrão */
 .login-box button {
-    background: var(--primary); /* antes: var(--primary-color) */
+    background: var(--primary);
     color: white;
     border: none;
     padding: 12px;
@@ -395,7 +394,6 @@ text-align: justify;
     box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
-/* hover continua com escurecimento */
 .login-box button:hover {
     background: #a30000;
     transform: translateY(-2px);
@@ -416,7 +414,6 @@ text-align: justify;
     font-size: 1rem;
 }
 
-/* PREÇO DO PLANO DE COMPRA */
 .planos-container {
     display: flex;
     gap: 40px;
@@ -424,7 +421,6 @@ text-align: justify;
     padding: 60px 20px;
 }
 
-/* CARTÃO GERAL */
 .plano-card {
     width: 320px;
     background: #ffffff;
@@ -442,30 +438,25 @@ text-align: justify;
 }
 
 .plano-card.destaque {
-    /* se quiser destacar por borda e sombra, faça assim (sem transformar por padrão) */
     border-top: 8px solid #d00000;
-    /* transforme somente no hover, então não colocar transform aqui */
 }
 
-
-/* TÍTULO */
 .plano-card h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-/* ----------------- PREÇOS ----------------- */
 .preco-destaque {
     display: flex;
-    flex-direction: column; /* tudo em coluna */
-    align-items: center;    /* centraliza horizontalmente */
+    flex-direction: column;
+    align-items: center;
 }
 
 .preco-destaque .valor-wrapper {
-    display: flex;          /* R$ e valor lado a lado */
+    display: flex;
     align-items: baseline;
     gap: 4px;
-    margin-bottom: 0px;     /* espaço entre valor e parcelamento */
+    margin-bottom: 0px;
 }
 
 .preco-destaque .moeda {
@@ -484,21 +475,19 @@ text-align: justify;
 }
 
 .preco-destaque .parcelamento {
-    font-size: 0.9rem; /* menor que o valor */
+    font-size: 0.9rem;
     color: #555;
     text-align: center;
-    margin-top: 0px;   /* fica perto do valor */
+    margin-top: 0px;
 }
 
-/* SUBTÍTULO PERTINHO DO PREÇO */
 .compra {
-    margin-top: 12px;    /* espaço entre parcelamento e "apenas pelo aparelho" */
+    margin-top: 12px;
     font-size: 1.1rem;
     font-weight: 600;
     color: #333;
 }
 
-/* DETALHES */
 .detalhes {
     margin-top: 25px;
     text-align: left;
@@ -517,7 +506,6 @@ text-align: justify;
     color: #d00000;
 }
 
-/* BOTÃO */
 .btn-plano {
     margin-top: 25px;
     width: 100%;
@@ -537,16 +525,16 @@ text-align: justify;
 }
 
 .descricao {
-    text-indent: 25px; /* ajusta a quantidade de espaço no início */
-    line-height: 1.5;  /* opcional, deixa o texto mais legível */
+    text-indent: 25px;
+    line-height: 1.5;
 }
 
 .titulo01 {
-    text-align: center;   /* centraliza o título */
-    margin-top: 40px;     /* espaço acima do título */
-    margin-bottom: 30px;  /* espaço entre o título e os produtos */
-    font-size: 36px;      /* tamanho do título */
-    color: #d40000;       /* cor do título */
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #d40000;
 }
 
 #cartModal {
@@ -611,3 +599,46 @@ text-align: justify;
     cursor: pointer;
     font-size: 12px;
 }
+
+.page-title {
+        text-align: center;
+        font-size: 42px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        font-weight: 800;
+    }
+
+    /* Cards organizados */
+    .lojas-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .loja-card {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        border: 2px solid var(--primary-color);
+        box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        transition: 0.3s;
+    }
+
+    .loja-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+    }
+
+    .loja-card h3 {
+        color: var(--primary-color);
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .loja-card p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }

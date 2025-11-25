@@ -1,19 +1,14 @@
 window.cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// DEBUG: arquivo carregado
 console.log('[cart] script loaded. Cart length:', window.cart.length);
 
-// -----------------------------
-// Atualiza contador do carrinho (o número amarelo)
-// -----------------------------
+// Atualiza contador do carrinho
 window.updateCartCount = function () {
     const countSpan = document.querySelector('.carrinho1 span');
     if (countSpan) countSpan.textContent = window.cart.length;
 };
 
-// -----------------------------
 // Adiciona produto ao carrinho
-// -----------------------------
 window.addToCart = function (product) {
     if (!product || !product.name || !product.price) {
         alert('Erro ao adicionar produto: dados inválidos.');
@@ -29,9 +24,7 @@ window.addToCart = function (product) {
     console.log('[cart] adicionado:', product.name, 'novo tamanho:', window.cart.length);
 };
 
-// -----------------------------
 // Remove item do carrinho
-// -----------------------------
 window.removeFromCart = function (index) {
     if (index < 0 || index >= window.cart.length) return;
 
@@ -43,9 +36,7 @@ window.removeFromCart = function (index) {
     console.log('[cart] item removido:', removed, 'novo tamanho:', window.cart.length);
 };
 
-// -----------------------------
 // Abre/fecha o carrinho
-// -----------------------------
 window.toggleCart = function () {
     const modal = document.getElementById('cartModal');
     if (!modal) return;
@@ -56,9 +47,7 @@ window.toggleCart = function () {
     console.log('[cart] toggleCart chamado. Active?:', modal.classList.contains('active'));
 };
 
-// -----------------------------
-// Renderiza itens no modal do carrinho
-// -----------------------------
+// Renderiza os itens do carrinho
 window.renderCart = function () {
     const list = document.getElementById('cartItems');
     if (!list) return;
@@ -113,7 +102,6 @@ window.renderCart = function () {
         list.appendChild(li);
     });
 
-    // Atualiza o footer com o total
     if (footer) {
         footer.style.display = 'block';
         const totalSpan = footer.querySelector('.cart-total-amount');
@@ -124,9 +112,6 @@ window.renderCart = function () {
     }
 };
 
-// -----------------------------
-// Inicializa contador e clique no ícone
-// -----------------------------
 document.addEventListener('DOMContentLoaded', () => {
     window.updateCartCount();
 
@@ -138,6 +123,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Render inicial do carrinho
     window.renderCart();
 });
