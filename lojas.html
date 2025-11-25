@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossas Lojas - Rede Supermercado</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    /* Título bonito */
+    .page-title {
+        text-align: center;
+        font-size: 42px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        font-weight: 800;
+    }
+
+    /* Cards organizados */
+    .lojas-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .loja-card {
+        background-color: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        border: 2px solid var(--primary-color);
+        box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+        transition: 0.3s;
+    }
+
+    .loja-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+    }
+
+    .loja-card h3 {
+        color: var(--primary-color);
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .loja-card p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    </style>
+    </head>
+    <body>
+
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo02.png" width="900" height="auto"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a>Departamentos</a>
+                        <ul>
+                            <li><a href="alimentos.html">Alimentos</a></li>
+                            <li><a href="bebidas.html">Bebidas</a></li>
+                            <li><a href="higiene.html">Higiene</a></li>
+                            <li><a href="limpeza.html">Limpeza</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="lojas.html">Nossas Lojas</a></li>
+                    <li><a href="rede.html">Rede+</a></li>
+                </ul>
+            </nav>
+            <div class="carrinho1">
+                <img src="img/carrinho.png" alt="Carrinho">
+                <span>0</span>
+            </div>
+        </header>
+
+    <main>
+        <h1 class="page-title">Nossas Lojas</h1>
+
+        <div class="lojas-container">
+
+            <!-- Telêmaco Borba em cima -->
+            <div class="loja-card">
+                <h3>Telêmaco Borba</h3>
+                <p><strong>Endereço:</strong> Rua Principal, 123 - Centro</p>
+                <p><strong>Funcionamento:</strong> 08h às 20h</p>
+                <p><strong>Descrição:</strong> Uma loja moderna, com grande variedade de produtos, corredores amplos e atendimento diferenciado. É a unidade mais completa da Rede Supermercado.</p>
+            </div>
+
+            <!-- Ventania embaixo -->
+            <div class="loja-card">
+                <h3>Ventania</h3>
+                <p><strong>Endereço:</strong> Av. Central, 456 - Centro</p>
+                <p><strong>Funcionamento:</strong> 08h às 20h</p>
+                <p><strong>Descrição:</strong> Unidade compacta e aconchegante, com produtos frescos, excelente açougue e equipe treinada para um atendimento ágil e acolhedor.</p>
+            </div>
+
+        </div>
+    </main>
+
+<!-- Modal do carrinho -->
+<div id="cartModal">
+    <div class="modal-header">
+        <span>Carrinho</span>
+        <button onclick="toggleCart()">×</button>
+    </div>
+
+    <ul class="modal-content" id="cartItems"></ul>
+
+    <div class="modal-footer" style="display:none;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <strong>Total:</strong>
+            <strong class="cart-total-amount">R$ 0.00</strong>
+        </div>
+        <button onclick="alert('Implementar checkout')" class="checkout-btn">Finalizar pedido</button>
+    </div>
+</div>
+
+
+    <footer>
+        <p>© 2025 Rede Supermercado - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+    </body>
+</html>

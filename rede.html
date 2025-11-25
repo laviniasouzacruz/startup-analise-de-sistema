@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede+ - Rede Supermercado</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- -------------------------- HEADER PADRÃO ---------------------------- -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo02.png" width="900" height="auto"></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a>Departamentos</a>
+                    <ul>
+                        <li><a href="alimentos.html">Alimentos</a></li>
+                        <li><a href="bebidas.html">Bebidas</a></li>
+                        <li><a href="higiene.html">Higiene</a></li>
+                        <li><a href="limpeza.html">Limpeza</a></li>
+                    </ul>
+                </li>
+                <li><a href="lojas.html">Nossas Lojas</a></li>
+                <li><a href="rede.html">Rede+</a></li>
+            </ul>
+        </nav>
+        <div class="carrinho1">
+            <img src="img/carrinho.png" alt="Carrinho">
+            <span>0</span>
+        </div>
+    </header>
+
+    <section class="rede-hero">
+        <div class="hero-text">
+            <h1>O Sistema Inteligente Que Liga Mercado + Cliente</h1>
+
+            <p class="descricao">
+                O <b>Rede+</b> é um sistema que automatiza o estoque doméstico do cliente de forma prática e rápida. Com o <b>Leitor Inteligente</b>, os produtos são registrados automaticamente ao passar pelo caixa ou ao aproximar a etiqueta em casa. Pelo site ou app, o cliente acompanha o que tem, o que está acabando e o que já terminou, tudo atualizado em tempo real. Para produtos fora da embalagem original, basta colar a etiqueta no recipiente usado no dia a dia.
+            </p>
+
+            <p class="descricao">
+             As etiquetas vazias <b>não devem ser descartadas.</b> Ao retornar ao mercado, o cliente as entrega no caixa para que sejam reutilizadas, mantendo o sistema <b>eficiente, sustentável e sem desperdícios,</b> facilitando a organização do estoque doméstico e garantindo praticidade em todas as compras.
+            </p>
+        </div>
+
+        <div class="login-box" id="login">
+            <i class="fa-solid fa-user-circle"></i>
+            <h2>Já é Rede+?</h2>
+            <input type="text" placeholder="Digite seu CPF">
+            <input type="password" placeholder="Digite sua senha">
+            <button>Entrar</button>
+        </div>
+    </section>
+
+
+    <!-- -------------------------- PLANOS SUPER CHAMATIVOS ---------------------------- -->
+    <section class="planos-container">
+
+    <!-- PLANO 1: ALUGUEL -->
+    <div class="plano-card destaque">
+        <h2>Plano de Aluguel</h2>
+
+        <div class="preco-destaque">
+            <div class="valor-wrapper">
+                <span class="moeda">R$</span>
+                <span class="valor">130</span>
+                <span class="mes">/ mês</span>
+            </div>
+        </div>
+
+        <p class="compra">inclui aparelho + software</p>
+
+        <div class="detalhes">
+            <p><i class="fa-solid fa-circle-check"></i> <i>R$ 80/mês pelo aparelho</i></p>
+            <p><i class="fa-solid fa-circle-check"></i> <i>R$ 50/mês pelo software</i></p>
+            <p><i class="fa-solid fa-circle-check"></i> <i>Atualizações e manutenções incluídas</i></p>
+        </div>
+
+        <button class="btn-plano">Quero este plano</button>
+    </div>
+
+    <!-- PLANO 2: COMPRA -->
+    <div class="plano-card">
+        <h2>Compra do Aparelho</h2>
+
+    <div class="preco-destaque">
+        <div class="valor-wrapper">
+            <span class="moeda">R$</span>
+            <span class="valor">620</span>
+            <span class="mes">à vista</span>
+        </div>
+        <div class="parcelamento">
+            Ou 10x de R$ 62 sem juros
+        </div>
+    </div>
+    <p class="compra">apenas pelo aparelho</p>
+
+
+        <div class="detalhes">
+            <p><i class="fa-solid fa-circle-check"></i> <i>R$ 50/mês pelo software</i></p>
+            <p><i class="fa-solid fa-circle-check"></i> <i>No pagamento à vista, o 1º mês do software é grátis</i></p>
+            <p><i class="fa-solid fa-circle-check"></i> <i>Atualizações e manutenções incluídas</i></p>
+        </div>
+
+
+        <button class="btn-plano">Quero este plano</button>
+    </div>
+    </section>
+
+<!-- Modal do carrinho -->
+<div id="cartModal">
+    <div class="modal-header">
+        <span>Carrinho</span>
+        <button onclick="toggleCart()">×</button>
+    </div>
+
+    <ul class="modal-content" id="cartItems"></ul>
+
+    <div class="modal-footer" style="display:none;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <strong>Total:</strong>
+            <strong class="cart-total-amount">R$ 0.00</strong>
+        </div>
+        <button onclick="alert('Implementar checkout')" class="checkout-btn">Finalizar pedido</button>
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+

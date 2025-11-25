@@ -1,1 +1,0 @@
-# startup-analise-de-sistema

@@ -1,0 +1,616 @@
+:root {
+    --primary: #d40000;
+    --secondary: #fff; 
+    --gray: #f5f5f5;
+    --dark: #333;
+    --hover-color: #b71c1c;
+    --accent-color: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--gray);
+    color: var(--dark);
+}
+
+header {
+    width: 100%;
+    background: var(--primary);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo img {
+    height: 90px !important;
+    width: auto !important;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+nav li {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+nav li a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+nav li a:hover {
+    color: #ffdddd;
+}
+
+nav li a.active {
+    color: var(--secondary);
+}
+
+nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary);
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 180px;
+    z-index: 200;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav li ul li {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+nav li ul li a {
+    color: var(--secondary);
+    display: block;
+}
+
+nav li ul li a:hover {
+    background-color: var(--hover-color);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+}
+
+.carrinho1 {
+    position: relative;
+    cursor: pointer;
+}
+
+.carrinho1 img {
+    height: 45px;
+    width: auto;
+}
+
+.carrinho1 span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: yellow;
+    color: #000;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rede-banner {
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    padding: 60px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 35px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.planos {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.plano {
+    background: white;
+    width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.plano h3 {
+    font-size: 22px;
+    color: var(--primary);
+}
+
+.price {
+    font-size: 26px;
+    color: var(--primary);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.mensal, .total {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--accent-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product button {
+    margin-top: 12px;
+    padding: 10px 15px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product button:hover {
+    background-color: var(--hover-color);
+}
+
+.login-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-box {
+    background: white;
+    padding: 25px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.login-box input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.btn, .btn-primary {
+    width: 90%;
+    padding: 12px 0;
+    background: var(--primary);
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover, .btn:hover {
+    background-color: var(--hover-color);
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+@media(max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        background-color: var(--primary);
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        padding: 20px;
+        transition: 0.3s;
+        border-radius: 0 0 10px 10px;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    nav li ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.welcome-section {
+    width: 80%;
+    margin: 40px auto; /* espaço entre header e produtos */
+    background: linear-gradient(135deg, #d40000, #ff4d4d);
+    color: #fff;
+    padding: 48px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* --------------------------------------- */
+/* HERO AJUSTADO PARA ESQUERDA + LOGIN DIREITA */
+/* --------------------------------------- */
+.rede-hero {
+display: flex;
+justify-content: space-between;
+padding: 60px;
+background: white;
+margin-top: 30px;
+flex-wrap: wrap;
+gap: 40px;
+}
+
+.hero-text {
+width: 55%;
+min-width: 300px;
+}
+
+.hero-text h1 {
+font-size: 45px;
+color: var(--primary-color);
+margin-bottom: 22px; /* espaço pedido */
+}
+
+.hero-text p {
+font-size: 19px;
+line-height: 1.6;
+text-align: justify;
+}
+
+.login-box {
+    width: 330px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    position: relative;    /* garante posicionamento próprio */
+    z-index: 300;          /* evita ser coberto por outros elementos */
+}
+
+.login-box i {
+    font-size: 55px;
+    color: var(--primary); /* antes: var(--primary-color) -> use var(--primary) */
+    margin-bottom: 10px;
+}
+
+.login-box input {
+    width: 92%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 15.5px;
+}
+
+/* botão corrigido: garante background visível por padrão */
+.login-box button {
+    background: var(--primary); /* antes: var(--primary-color) */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 95%;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background 0.2s, transform 0.18s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* hover continua com escurecimento */
+.login-box button:hover {
+    background: #a30000;
+    transform: translateY(-2px);
+}
+
+.moeda {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.valor {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #b80000;
+}
+
+.mes {
+    font-size: 1rem;
+}
+
+/* PREÇO DO PLANO DE COMPRA */
+.planos-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* CARTÃO GERAL */
+.plano-card {
+    width: 320px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 6px 16px rgba(0,0,0,0.18);
+    text-align: center;
+    position: relative;
+    border-top: 6px solid #d00000;
+    transition: 0.3s;
+}
+
+.plano-card:hover {
+    transform: translateY(-5px);
+}
+
+.plano-card.destaque {
+    /* se quiser destacar por borda e sombra, faça assim (sem transformar por padrão) */
+    border-top: 8px solid #d00000;
+    /* transforme somente no hover, então não colocar transform aqui */
+}
+
+
+/* TÍTULO */
+.plano-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* ----------------- PREÇOS ----------------- */
+.preco-destaque {
+    display: flex;
+    flex-direction: column; /* tudo em coluna */
+    align-items: center;    /* centraliza horizontalmente */
+}
+
+.preco-destaque .valor-wrapper {
+    display: flex;          /* R$ e valor lado a lado */
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 0px;     /* espaço entre valor e parcelamento */
+}
+
+.preco-destaque .moeda {
+    font-size: 1.3rem;
+}
+
+.preco-destaque .valor {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #d00000;
+}
+
+.preco-destaque .mes {
+    font-size: 1rem;
+    margin-left: 4px;
+}
+
+.preco-destaque .parcelamento {
+    font-size: 0.9rem; /* menor que o valor */
+    color: #555;
+    text-align: center;
+    margin-top: 0px;   /* fica perto do valor */
+}
+
+/* SUBTÍTULO PERTINHO DO PREÇO */
+.compra {
+    margin-top: 12px;    /* espaço entre parcelamento e "apenas pelo aparelho" */
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* DETALHES */
+.detalhes {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.detalhes p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    font-style: italic;
+    font-size: 1rem;
+}
+
+.detalhes i {
+    color: #d00000;
+}
+
+/* BOTÃO */
+.btn-plano {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: #d00000;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-plano:hover {
+    background: #850000;
+}
+
+.descricao {
+    text-indent: 25px; /* ajusta a quantidade de espaço no início */
+    line-height: 1.5;  /* opcional, deixa o texto mais legível */
+}
+
+.titulo01 {
+    text-align: center;   /* centraliza o título */
+    margin-top: 40px;     /* espaço acima do título */
+    margin-bottom: 30px;  /* espaço entre o título e os produtos */
+    font-size: 36px;      /* tamanho do título */
+    color: #d40000;       /* cor do título */
+}
+
+#cartModal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+#cartModal.active {
+    display: flex;
+}
+
+#cartModal .modal-header {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+#cartModal .modal-header button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#cartModal .modal-content {
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#cartModal .modal-content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+#cartModal .modal-content li button {
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 6px;
+    cursor: pointer;
+    font-size: 12px;
+}

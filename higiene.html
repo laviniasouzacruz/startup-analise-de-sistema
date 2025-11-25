@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Higiene | Rede Supermercado</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="img/logo02.png" width="900" height="auto"></a>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a>Departamentos</a>
+                <ul>
+                    <li><a href="alimentos.html">Alimentos</a></li>
+                    <li><a href="bebidas.html">Bebidas</a></li>
+                    <li><a href="higiene.html">Higiene</a></li>
+                    <li><a href="limpeza.html">Limpeza</a></li>
+                </ul>
+            </li>
+            <li><a href="lojas.html">Nossas Lojas</a></li>
+            <li><a href="rede.html">Rede+</a></li>
+        </ul>
+    </nav>
+    <div class="carrinho1">
+        <img src="img/carrinho.png" alt="Carrinho">
+        <span>0</span>
+    </div>
+</header>
+
+<main>
+    <h1 class="titulo01">Higiene</h1>
+    <div class="products">
+
+        <div class="product">
+          <img src="img/lencinhoumedecido.png" width="170" alt="Lencinhos Umedecidos">
+          <h3>TOALHAS UMEDECIDAS COTTONBABY 50 UNIDADES</h3>
+          <p>R$ 12,99</p>
+          <button onclick="addToCart({name:'Lencinhos Umedecidos', price:12.99})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="img/escovadedente.png" width="190"="Escova de Dente">
+          <h3>ESCOVA DENTAL JADEPRO PRO-SLIM</h3>
+          <p>R$ 24,90</p>
+          <button onclick="addToCart({name:'Escova de Dente', price:24.90})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+          <img src="img/shampoo-pantene.png" width="140"alt="Kit-Shampoo e Condicionador">
+          <h3>KIT PANTENE QUERATINA SHAMPOO + CONDICIONADOR</h3>
+          <p>R$ 48,99</p>
+          <button onclick="addToCart({name:'Kit-Shampoo e Condicionador', price:48.99})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/sabonete.png" width="470" alt="Sabonete Nivea Orquideas">
+            <h3>SABONETE NIVEA ORQUIDEAS 85G</h3>
+            <p>R$ 4,50</p>
+            <button onclick="addToCart({name:'Sabonete Nivea Orquideas', price:4.50})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/papelhigienico.png" width="180" alt="Papel Higiênico">
+            <h3>PAPEL HIGIENICO COTTON DELUXE 12 UNIDADES</h3>
+            <p>R$ 19,99</p>
+            <button onclick="addToCart({name:'Papel Higiênico', price:19.99})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/desodorantefem.jpeg" width="190" alt="Desodorante Feminino">
+            <h3>DESODORANTE GEL SECRET LAVANDA 45G</h3>
+            <p>R$ 20,99</p>
+            <button onclick="addToCart({name:'Desodorante Feminino', price:20.99})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/absorvente.png" width="170" alt="Absorvente">
+            <h3>ABSORVENTE INTIMUS 32 UNIDADES </h3>
+            <p>R$ 18,50</p>
+            <button onclick="addToCart({name:'Absorvente', price:18.50})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/escovadecabelo.png" width="170" alt="Escova de Cabelo">
+            <h3>ESCOVA DE CABELO RICCA</h3>
+            <p>R$ 28,99</p>
+            <button onclick="addToCart({name:'Escova de Cabelo', price:28.99})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/fiodental.png" width="170" alt="Fio Dental">
+            <h3>FIO DENTAL COLGATE MENTA 50M</h3>
+            <p>R$ 19,90</p>
+            <button onclick="addToCart({name:'Fio Dental', price:19.90})">Adicionar ao carrinho</button>
+        </div>
+
+        <div class="product">
+            <img src="img/pastainfantil.png" width="160" alt="Pasta de Dente Infantil">
+            <h3>PASTA DE DENTE INFANTIL STITCH 104G</h3>
+            <p>R$ 16,50</p>
+            <button onclick="addToCart({name:'Pasta de Dente Infantil', price:16.50})">Adicionar ao carrinho</button>
+        </div>
+
+    </div>
+</main>
+
+<!-- Modal do carrinho -->
+<div id="cartModal">
+    <div class="modal-header">
+        <span>Carrinho</span>
+        <button onclick="toggleCart()">×</button>
+    </div>
+
+    <ul class="modal-content" id="cartItems"></ul>
+
+    <div class="modal-footer" style="display:none;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+            <strong>Total:</strong>
+            <strong class="cart-total-amount">R$ 0.00</strong>
+        </div>
+        <button onclick="alert('Implementar checkout')" class="checkout-btn">Finalizar pedido</button>
+    </div>
+</div>
+
+
+<footer>
+    <p>© 2025 Rede Supermercado - Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
