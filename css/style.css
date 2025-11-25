@@ -326,9 +326,6 @@ footer {
     line-height: 1.5;
 }
 
-/* --------------------------------------- */
-/* HERO AJUSTADO PARA ESQUERDA + LOGIN DIREITA */
-/* --------------------------------------- */
 .rede-hero {
 display: flex;
 justify-content: space-between;

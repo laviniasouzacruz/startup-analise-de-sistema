@@ -1,6 +1,3 @@
-// ---------- CART SCRIPT LIMPO ---------- //
-
-// Inicializa carrinho do localStorage ou vazio
 window.cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // DEBUG: arquivo carregado
