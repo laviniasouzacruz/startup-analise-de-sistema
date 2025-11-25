@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo01.png">
+    <title>Estoque | Rede+</title>
+    <link rel="stylesheet" href="css/painel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <aside class="sidebar">
+            <div class="top">
+                <div class="perfil">
+                    <i class="fa-solid fa-user-circle user-icone"></i>
+                    <h2>Lavinia Souza Cruz</h2>
+                </div>
+
+                <nav class="menu">
+                    <a href="login.html" class="menu-item"><i class="fa-solid fa-box"></i> Meu Estoque</a>
+                    <a href="index.html" class="menu-item"><i class="fa-solid fa-cart-shopping"></i> Mercado Online</a>
+                    <a href="#" class="menu-item"><i class="fa-solid fa-basket-shopping"></i> Carrinho</a>
+                </nav>
+            </div>
+
+            <button class="btn-sair" onclick="window.location.href='index.html'">
+                <i class="fa-solid fa-right-from-bracket"></i> Sair
+            </button>
+        </aside>
+
+        <main class="conteudo">
+
+            <div class="alerta-estoque">
+                <p><strong>Atenção:</strong> você possui apenas <b>1 unidade</b> de <b>Café Damasco Tradicional 250G.
+                </b></p>
+                <button class="btn-alerta" onclick="alert('Adicionar ao carrinho')">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+            <!-- AQUI DENTRO está o correto -->
+            <h1>Seu Estoque</h1>
+
+            <div class="estoque-grid">
+
+                <div class="estoque-card">
+                    <img src="img/arroz.png" alt="Arroz">
+                    <h3>ARROZ RAMPINELLI PARBOILIZADO 1KG</h3>
+                    <p class="quantidade">Você possui <b>3 unidades</b></p>
+                </div>
+
+                <div class="estoque-card">
+                    <img src="img/lencinhoumedecido.png" alt="Toalhas Umedecidas">
+                    <h3>TOALHAS UMEDECIDAS COTTONBABY 50 UNIDADES</h3>
+                    <p class="quantidade">Você possui <b>1 unidade</b></p>
+                </div>
+
+                <div class="estoque-card alerta">
+                    <img src="img/cafe.png" alt="Pó de Café">
+                    <h3>CAFÉ DAMASCO TRADICIONAL 250G</h3>
+                    <p class="quantidade">Você possui <b>1 unidade</b></p>
+                </div>
+
+                <div class="estoque-card">
+                    <img src="img/sucoprats-uva.png" alt="Suco">
+                    <h3>SUCO PRATS UVA 300ML</h3>
+                    <p class="quantidade">Você possui <b>2 unidades</b></p>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

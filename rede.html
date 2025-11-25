@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Rede+ - Rede Supermercado</title>
+        <link rel="icon" type="image/png" href="img/logo01.png">
+        <title>Rede+ | Rede Supermercado</title>
 
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -52,10 +53,15 @@
             <div class="login-box" id="login">
                 <i class="fa-solid fa-user-circle"></i>
                 <h2>Já é Rede+?</h2>
-                <input type="text" placeholder="Digite seu CPF">
-                <input type="password" placeholder="Digite sua senha">
-                <button>Entrar</button>
+
+                <input id="cpf" type="text" placeholder="Digite seu CPF" maxlength="11">
+                <input id="senha" type="password" placeholder="Digite sua senha">
+
+                <button onclick="fazerLogin()">Entrar</button>
+
+                <p id="mensagemErro" style="color:red; margin-top:10px;"></p>
             </div>
+
         </section>
 
         <section class="planos-container">
@@ -121,7 +127,7 @@
                     <strong>Total:</strong>
                     <strong class="cart-total-amount">R$ 0.00</strong>
                 </div>
-                <button onclick="alert('Implementar checkout')" class="checkout-btn">Finalizar pedido</button>
+                <button onclick="finishCheckout()" class="checkout-btn">Finalizar pedido</button>
             </div>
         </div>
 

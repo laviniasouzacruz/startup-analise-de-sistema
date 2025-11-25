@@ -36,15 +36,9 @@ window.removeFromCart = function (index) {
     console.log('[cart] item removido:', removed, 'novo tamanho:', window.cart.length);
 };
 
-// Abre/fecha o carrinho
+// Abre/fecha o carrinho (VERSÃO QUE VOCÊ PEDIU)
 window.toggleCart = function () {
-    const modal = document.getElementById('cartModal');
-    if (!modal) return;
-
-    modal.classList.toggle('active');
-    window.renderCart();
-
-    console.log('[cart] toggleCart chamado. Active?:', modal.classList.contains('active'));
+    document.getElementById("cartModal").classList.toggle("active");
 };
 
 // Renderiza os itens do carrinho
@@ -125,3 +119,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.renderCart();
 });
+
+// Finaliza a compra
+window.finishCheckout = function () {
+    if (window.cart.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    alert("Compra finalizada com sucesso! Obrigado pela preferência ❤️");
+
+    // limpa o carrinho
+    window.cart = [];
+    localStorage.removeItem('cart');
+    
+    window.updateCartCount();
+    window.renderCart();
+
+    // fecha o modal
+    window.toggleCart();
+};
+
+//LOGIN
+function fazerLogin() {
+    const cpf = document.getElementById("cpf").value.trim();
+    const senha = document.getElementById("senha").value.trim();
+    const msg = document.getElementById("mensagemErro");
+
+    msg.textContent = ""; // limpa erro anterior
+
+    // CPF precisa ter somente números e tamanho 11
+    if (!/^\d{11}$/.test(cpf)) {
+        msg.textContent = "O CPF deve ter exatamente 11 números.";
+        return;
+    }
+
+    // Senha com mínimo 6 caracteres
+    if (senha.length < 6) {
+        msg.textContent = "A senha deve ter pelo menos 6 caracteres.";
+        return;
+    }
+
+    // Login OK → redireciona
+    window.location.href = "login.html"; 
+}
