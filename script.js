@@ -36,7 +36,7 @@ window.removeFromCart = function (index) {
     console.log('[cart] item removido:', removed, 'novo tamanho:', window.cart.length);
 };
 
-// Abre/fecha o carrinho (VERSÃO QUE VOCÊ PEDIU)
+// Abre/fecha o carrinho
 window.toggleCart = function () {
     document.getElementById("cartModal").classList.toggle("active");
 };
@@ -129,18 +129,18 @@ window.finishCheckout = function () {
 
     alert("Compra finalizada com sucesso! Obrigado pela preferência ❤️");
 
-    // limpa o carrinho
+    // Limpa o carrinho
     window.cart = [];
     localStorage.removeItem('cart');
     
     window.updateCartCount();
     window.renderCart();
 
-    // fecha o modal
+    // Fecha o modal
     window.toggleCart();
 };
 
-//LOGIN
+//Login
 function fazerLogin() {
     const cpf = document.getElementById("cpf").value.trim();
     const senha = document.getElementById("senha").value.trim();
